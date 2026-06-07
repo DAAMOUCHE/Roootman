@@ -236,32 +236,41 @@ to quickly find where to replace images.
 
     /* ================= RESPONSIVE ================= */
 
-    @media(max-width:900px){
+   @media(max-width:900px){
 
-      .hero-wrapper,
-      .section-grid,
-      .contact-wrapper{
-        grid-template-columns:1fr;
-      }
+  nav{
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
 
-      .hero h1{
-        font-size:50px;
-      }
+  .hero-wrapper,
+  .section-grid,
+  .contact-wrapper{
+    grid-template-columns:1fr;
+  }
 
-      .section-title{
-        font-size:45px;
-      }
+  .hero h1{
+    font-size:50px;
+  }
 
-      .nav-links{
-        gap:20px;
-        font-size:14px;
-      }
+  .section-title{
+    font-size:45px;
+  }
 
-      .cards{
-        justify-content:center;
-      }
+  .nav-links{
+    gap:15px;
+    font-size:14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align:center;
+  }
 
-    }
+  .cards{
+    justify-content:center;
+  }
+
+}
 
   </style>
 </head>
