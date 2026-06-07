@@ -1,0 +1,677 @@
+<!-- =========================================================
+ROOTMAN ONE PAGE PORTFOLIO WEBSITE
+You can open this file with VS Code and save it as:
+index.html
+
+IMPORTANT:
+Search for:
+"REPLACE YOUR IMAGE HERE"
+
+to quickly find where to replace images.
+========================================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roootman</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Nunito',sans-serif;
+      background:#f8f1e7;
+      color:#2f2f2f;
+      overflow-x:hidden;
+    }
+
+    h1,h2,h3,h4{
+      font-family:'Baloo 2',cursive;
+    }
+
+    img{
+      width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:30px 0;
+    }
+
+    .logo{
+      font-size:55px;
+      line-height:0.8;
+      color:#ef4a43;
+      font-family:'Baloo 2',cursive;
+      font-weight:700;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:40px;
+    }
+
+    .nav-links a{
+      color:#222;
+      font-weight:700;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      padding:40px 0 100px;
+    }
+
+    .hero-wrapper{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .hero h1{
+      font-size:70px;
+      color:#ef4a43;
+      line-height:1;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:22px;
+      line-height:1.8;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 30px;
+      border-radius:50px;
+      font-weight:700;
+      color:white;
+      background:#39a98b;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .photo-frame{
+      background:white;
+      padding:18px;
+      border-radius:10px;
+      transform:rotate(-2deg);
+      box-shadow:0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    /* ================= SECTION ================= */
+
+    section{
+      padding:90px 0;
+    }
+
+    .yellow{
+      background:#f5b62d;
+    }
+
+    .green{
+      background:#37a68f;
+      color:white;
+    }
+
+    .section-grid{
+      display:grid;
+      grid-template-columns:350px 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .section-title{
+      font-size:55px;
+      line-height:1;
+      margin-bottom:20px;
+    }
+
+    .section-text{
+      font-size:20px;
+      line-height:1.8;
+      margin-bottom:25px;
+    }
+
+    .cards{
+      display:flex;
+      gap:25px;
+      flex-wrap:wrap;
+    }
+
+    .card{
+      background:white;
+      width:300px;
+      padding:12px;
+      border-radius:10px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .card img{
+      border-radius:8px;
+      height:240px;
+      object-fit:cover;
+    }
+
+    .card h3{
+      text-align:center;
+      padding:12px 0 5px;
+      font-size:22px;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact{
+      padding-bottom:40px;
+    }
+
+    .contact-wrapper{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .contact h2{
+      font-size:60px;
+      color:#ef4a43;
+      margin-bottom:20px;
+    }
+
+    .contact p{
+      font-size:22px;
+      line-height:1.8;
+      margin-bottom:15px;
+    }
+
+    .footer{
+      background:#ef4a43;
+      color:white;
+      text-align:center;
+      padding:25px;
+      font-size:18px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:900px){
+
+      .hero-wrapper,
+      .section-grid,
+      .contact-wrapper{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:50px;
+      }
+
+      .section-title{
+        font-size:45px;
+      }
+
+      .nav-links{
+        gap:20px;
+        font-size:14px;
+      }
+
+      .cards{
+        justify-content:center;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <div class="container">
+
+    <nav>
+
+      <!-- LOGO -->
+      <div class="logo">
+        <img src="images/roootman.png" alt="Profile Photo" style="height: 150px; object-fit: cover;">
+      </div>
+
+      <!-- MENU -->
+      <div class="nav-links">
+        <a href="#">About</a>
+        <a href="#books">Books</a>
+        <a href="#etsy">Printables</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </nav>
+
+  </div>
+
+  <!-- ================= HERO SECTION ================= -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-wrapper">
+
+        <div>
+
+          <h1>Hi, I'm Mohamed!</h1>
+
+
+          <p>
+            A children’s book illustrator and the artist behind Roootman Studio. Since 2018, I’ve been helping authors, families, and publishers bring their ideas to life through colorful illustrations, expressive characters, and playful storytelling.
+
+            Alongside children’s books, I also create printable paper toys, DIY crafts, and fun learning activities for kids through my Etsy shop, designed to inspire creativity and imagination in playful ways.
+          </p>
+
+        <!--  <a href="#" class="btn">
+            Learn More About Me
+          </a>-->
+
+        </div>
+
+        <div class="photo-frame">
+
+          <!-- ====================================================
+          REPLACE YOUR IMAGE HERE
+          Change "images/profile.jpg"
+          ===================================================== -->
+
+          <img src="images/profil.jpg" alt="Profile Photo">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= CHILDREN BOOKS ================= -->
+
+  <section class="yellow" id="books">
+
+    <div class="container">
+
+      <div class="section-grid">
+
+        <div>
+
+          <h2 class="section-title">
+            Children's Books
+          </h2>
+
+          <p class="section-text">
+            Stories made with heart for little dreamers.
+          </p>
+
+        <!--   <a href="#" class="btn" style="background:#ef4a43;">
+            View Books
+          </a>-->
+
+        </div>
+
+        <div class="cards">
+
+          <!-- ====================================================
+          REPLACE YOUR BOOK COVER HERE
+          ===================================================== -->
+
+          <div class="card">
+            <img src="images/cloud.jpg" alt="cloud">
+            <h3>Cloud Jumping Club!</h3>
+          </div>
+
+          <div class="card">
+            <img src="images/summer.jpg" alt="summer">
+            <h3>Benny's Adventure</h3>
+          </div>
+
+          <div class="card">
+            <img src="images/Forest.jpg" alt="Forest">
+            <h3>Luma's Garden</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= ETSY SHOP ================= -->
+
+  <section>
+
+    <div class="container" id="etsy">
+
+      <div class="section-grid">
+
+        <div>
+
+          <h2 class="section-title" style="color:#ef4a43;">
+            Etsy Shop
+          </h2>
+
+          <p class="section-text">
+            Printable activities, coloring pages, and fun DIYs for kids.
+          </p>
+
+          <a href="https://roootmanprintable.etsy.com" target="_blank" rel="noopener noreferrer" class="btn" style="background:#4a8df0;">
+            Visit My Etsy Shop
+          </a>
+
+        </div>
+
+        <div class="cards">
+
+          <!-- ====================================================
+          REPLACE YOUR ETSY IMAGES HERE
+          ===================================================== -->
+
+          <div class="card">
+            <img src="images/etsy 1.jpg" alt="etsy 1">
+            <h3>Touch & Move Toys</h3>
+          </div>
+
+          <div class="card">
+            <img src="images/etsy 2.jpg" alt="etsy 2">
+            <h3>Father's Day</h3>
+          </div>
+
+          <div class="card">
+            <img src="images/etsy 3.jpg" alt="Etsy 3">
+            <h3>Circular Waterfall Card</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= PORTFOLIO ================= -->
+
+  <section class="green" id="portfolio">
+
+  <div class="container">
+
+    <div class="portfolio-layout">
+
+      <!-- LEFT TEXT -->
+
+      <div class="portfolio-text">
+
+        <h2 class="section-title">
+          Illustration Portfolio
+        </h2>
+
+        <p class="section-text">
+          A collection of playful characters, magical scenes,
+          and storytelling illustrations.
+        </p>
+
+        <a href="#" class="btn" style="background:#f5b62d;">
+          View Portfolio
+        </a>
+
+      </div>
+
+      <!-- RIGHT GALLERY -->
+
+      <div class="masonry-gallery">
+
+        <!-- ===================================================
+        REPLACE YOUR IMAGES HERE
+        Replace:
+        images/art1.jpg
+        images/art2.jpg
+        etc...
+        ==================================================== -->
+
+        <div class="item tall">
+          <img src="images/Roboto.jpg" alt="roboto">
+        </div>
+
+        <div class="item wide">
+          <img src="images/Vyx.jpg" alt="Vyx">
+        </div>
+
+        <div class="item">
+          <img src="images/Animals.jpg" alt="Animals">
+        </div>
+
+        <div class="item big">
+          <img src="images/Ze.jpg" alt="ze">
+        </div>
+
+        <div class="item">
+          <img src="images/run.png" alt="run">
+        </div>
+         <div class="item">
+          <img src="images/run.png" alt="run">
+        </div>
+
+        <div class="item">
+          <img src="images/hero.jpg" alt="hero">
+        </div>
+
+        <div class="item wide">
+          <img src="images/summer.jpg" alt="">
+        </div>
+
+        <div class="item">
+          <img src="images/fly.jpg" alt="fly">
+        </div>
+
+        <div class="item tall">
+          <img src="images/skoki.jpg" alt="skoki">
+        </div>
+
+
+
+        <div class="item">
+          <img src="images/Forest.jpg" alt="Forest">
+        </div>
+
+        <div class="item big">
+          <img src="images/sea.jpg" alt="sea">
+        </div>
+
+ <div class="item">
+          <img src="images/run.png" alt="run">
+        </div>
+
+        <div class="item">
+          <img src="images/nox.jpg" alt="nox">
+        </div>
+
+        <div class="item wide">
+          <img src="images/zoga.jpg" alt="zoga">
+        </div>
+
+        <div class="item">
+          <img src="images/cloud.jpg" alt="">
+        </div>
+
+        <div class="item">
+          <img src="images/collecting.jpg" alt="">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+ADD THIS CSS TO YOUR EXISTING CSS
+Paste it at the bottom of your <style>
+========================================================= -->
+
+<style>
+
+.portfolio-layout{
+  display:grid;
+  grid-template-columns:350px 1fr;
+  gap:50px;
+  align-items:start;
+}
+
+.portfolio-text{
+  position:sticky;
+  top:40px;
+}
+
+.masonry-gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:120px;
+  gap:18px;
+}
+
+.item{
+  overflow:hidden;
+  border-radius:12px;
+  background:white;
+  padding:10px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* DIFFERENT SIZES */
+
+.item.tall{
+  grid-row:span 2;
+}
+
+.item.wide{
+  grid-column:span 2;
+}
+
+.item.big{
+  grid-column:span 2;
+  grid-row:span 2;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+  .portfolio-layout{
+    grid-template-columns:1fr;
+  }
+
+  .portfolio-text{
+    position:relative;
+  }
+
+}
+
+@media(max-width:700px){
+
+  .masonry-gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+</style>
+
+  <!-- ================= CONTACT ================= -->
+
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <div class="contact-wrapper">
+
+        <div>
+
+          <h2>Let's Connect!</h2>
+
+          <p>
+            I'd love to hear from you about collaborations,
+            children's books, or illustration projects.
+          </p>
+
+          <p>
+            📧 Daamouchealaoui@gmail.com
+          </p>
+
+          <p>
+            📷 @Roootman.Studio
+          </p>
+
+        </div>
+
+        <div>
+
+          <!-- ====================================================
+          REPLACE YOUR CONTACT IMAGE HERE
+          ===================================================== -->
+
+          <img src="images/mail.png" alt="Mailbox">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <div class="footer">
+    © 2026 Roootman Studio. All rights reserved.
+  </div>
+
+</body>
+</html>
